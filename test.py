@@ -24,3 +24,14 @@ df_nuevas_observaciones = pd.DataFrame(nuevas_observaciones)
 df = df.append(df_nuevas_observaciones, ignore_index=True)
 
 print(df)
+
+##########
+##Marco###
+##########
+nuevos_datos = {
+    'motor': ['V10', 'V12', 'V5'],
+    'combustible': ['gasolina', 'gasolina', 'disel'],
+    'modelo': ['SUV', 'pickup', 'SUV']
+    }
+act=pd.concat([df,pd.DataFrame(nuevos_datos)],ignore_index=True)
+print(act)
