@@ -10,3 +10,17 @@ data = {
 
 df = pd.DataFrame(data)
 print(df)
+
+# Observaciones adicionales JMH
+nuevas_observaciones = {
+    'motor': ['4 cilindros', 'V6', 'V8'],
+    'combustible': ['diésel', 'gasolina', 'gasolina'],
+    'modelo': ['Pickup', 'Sedán', 'SUV']
+}
+
+df_nuevas_observaciones = pd.DataFrame(nuevas_observaciones)
+
+# Agregar las nuevas observaciones al DataFrame existente
+df = df.append(df_nuevas_observaciones, ignore_index=True)
+
+print(df)
